@@ -1,0 +1,624 @@
+:root {
+      --main-colour: #333;
+      --ligth-colour: #888;  
+      --border: 0.1rem solid #333;
+    
+   }
+
+  *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     border: none;
+     outline: none;
+     text-decoration: none;
+     transition: all 0.3s linear;
+   }
+
+   *::selection{
+     background: var(--main-colour);
+     color:#0e0d0d;
+   }
+
+  html{
+        font-family: Georgia, serif;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    section{
+        padding: 3rem 2rem;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-family: 'Yrsa', sans-serif;
+        font-weight: 400;
+    }
+    hr {
+        border: none;
+        border-top: 1px solid #8b8a8a;
+        margin: 20px 0;
+    }
+  
+ /* header section starts  */
+  .header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background: rgb(160, 152, 152);
+    }
+
+  .header .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding: 1rem;
+      
+    }
+
+  .header .nav .logo img {
+      height: 4.5rem;
+      
+    }
+
+    .header .nav .navbar a{
+          text-decoration: none; 
+          font-size: 1.5rem;
+          margin-left: 0.5rem;
+          color: #333;
+          padding: 1rem 1rem;
+          background-color: #888;
+          border-radius: 70px;
+    }
+
+    .header .nav .navbar a:hover {
+        text-decoration: underline;
+        color: #888;
+    }
+
+    
+    .header .nav .search-bar input:hover {
+        background-color: #f0f0f0;
+    }
+    
+    /* header section starts  */
+    .res-bg{
+        background: linear-gradient(to bottom, #ffffff00 0%, #ffffff 100%), 
+        url(../firstpage.jpg) no-repeat center center;
+      background-size: cover;
+      background-position: center; 
+    }
+
+    .res-bg .resolutions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .res-bg .resolutions .content {
+        width: 50rem;
+        text-align: center;
+    }
+    
+    .res-bg .resolutions .content h1 {
+        font-size: 8rem;
+        font-weight: 400;
+    }
+    
+    .res-bg .resolutions .content p {
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+    
+    .blo-res {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+
+    .blo-res .image {
+        flex: 1 1 40rem;
+        align-self: center;
+
+    }
+    .blo-res .image img {
+        width: 100%;
+    }
+    .blo-res .content {
+        flex: 1 1 40rem;
+    }
+    .blo-res .content h1 {
+        font-size: 4.5rem;
+        font-family: 'Yrsa', sans-serif;
+
+    }
+    .blo-res .content p {
+        font-size: 1.5rem;
+    }
+
+    .learn-more {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .arrow {
+        font-size: 3rem;
+        color: var(--main-colour);
+        background-color: transparent;
+        padding: 0.5rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .learn-text {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .arrow:hover {
+        color: var(--ligth-colour);
+    }
+
+    .waldinger {
+        display: flex;
+        align-items: center; 
+        flex-wrap: wrap;
+        height: 100vh; 
+    }
+
+    .waldinger .content {
+        flex: 1 1 40rem;
+        
+    }
+    .waldinger .content h1{
+        font-size: 3rem;
+        word-spacing: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .waldinger .content h3{
+        font-weight: 900;
+        font-size: 1.5rem;
+        z-index: 1;
+        position: relative;
+    }
+    .waldinger .content p {
+        font-size: 1.5rem;
+        margin-bottom: 8rem;
+    }
+    .waldinger #qoute {
+        color: rgb(211, 59, 59);
+        font-size: 6rem;
+        transform: translateY(-50%);
+        z-index: 0;
+        position: absolute;
+        opacity: 0.5;
+    }   
+    
+    .waldinger .image {
+        flex: 1 1 40rem;
+  
+    }
+    .waldinger .image img {
+        width: 100%;
+    }
+
+
+    .free-course .heading h1 {
+        font-size: 4rem;
+    }
+    .free-course .heading #FC-heading {
+        margin-top: 3rem; 
+    }
+
+    .free-course .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 30rem);
+        gap: 2rem;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .free-course .box-container .box:hover img {
+        transform: scale(1.1);
+    }
+    .free-course .box-container .box {
+        display: flex;
+        flex-direction: column; /* Stack content under the image */
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .free-course .box-container .box img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .free-course .box-container .box .content {
+        padding: 1.5rem;
+        background-color: #dddada; /* Grey background for the content */
+        border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+        transition: background-color 0.3s ease;
+        height: 20rem;
+    }
+    .free-course .box-container .box .content h1 {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    .free-course .box-container .box .content h3 {
+        text-decoration: none;
+        margin-top: 10rem;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    .free-course .box-container .box .content #fx {
+        margin-top: 6rem;
+    }
+    .free-course .box-container .box:hover .content h1 {
+        text-decoration: underline;
+        color: #333;
+    }
+    
+    .mental-health {
+        display: flex;
+        align-items: center; 
+        flex-wrap: wrap;
+        height: 100vh; 
+    }
+
+    .mental-health h1 {
+        font-size: 4.5rem;
+    }
+    .mental-health .left {
+        flex: 1 1 40rem;
+
+    }
+    .mental-health .left p{
+        font-size: 1.2rem;
+        width: 35vw;
+    }
+    .mental-health p span{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .mental-health p span:hover {
+        color:  rgb(211, 59, 59);
+        cursor: pointer;
+    }
+    .mental-health .rigth {
+        flex: 1 1 40rem;
+        height: 43rem;
+    }
+    .mental-health .rigth {
+        width: 45rem;
+    }
+    .mental-health .rigth h1 {
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    .mental-health .rigth h3 {
+        color:  rgb(211, 59, 59);
+        font-size: 4rem;
+        font-weight: 400;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+    .mental-health .rigth p {
+        font-size: 1.2rem;
+    }
+    .book {
+        margin-top: 15vh;
+    }
+    .book h1 {
+        font-size: 3.5rem;
+    }
+    .book .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 30rem);
+        gap: 2rem;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .book .box-container .box {
+        height: 40rem;
+        position: relative;
+    }
+
+    .book .box-container .box .content {
+        position: absolute;
+        color: white;
+        font-size: 1.5rem;
+        z-index: 1;
+        bottom: 0; /* Align to the bottom */
+        padding: 2rem; 
+        width: 100%;
+    }
+    .book .box-container .box .content h3 {
+        font-weight: 400;
+    }
+    .book .box-container .box:hover  {
+        transform: scale(1.05);
+    }
+    .book .box-container .box .content .learn-more i {
+        color: #fff;
+    }
+    .book .box-container .box:hover .content .learn-more i {
+        color: #888;
+    }
+    .book .box-container .box:hover .content h3 {
+        text-decoration: underline;
+        transform: translateY(-25%);
+        font-style: italic;
+        font-size: medium;
+    }
+    .book .box-container #box1 {
+        background: linear-gradient(to top,  rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../cover-Power-Broker.webp) no-repeat center center;
+      background-size: cover;
+      background-position: center;
+    }
+    .book .box-container #box1:hover {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../cover-Power-Broker.webp) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    .book .box-container #box2 {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../never-let-me-go.jpg) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box2:hover {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../never-let-me-go.jpg) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box3 {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../design-by-fire.jpg) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box3:hover {
+        background: linear-gradient(to top, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../design-by-fire.jpg) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box4 {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../free-u-me.jpg) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box4:hover {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../free-u-me.jpg) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box5 {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../darvin.webp) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box5:hover {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../darvin.webp) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box6 {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../salata-drowned-world.jpeg) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .book .box-container #box6:hover {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), 
+        url(../salata-drowned-world.jpeg) no-repeat center center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .book #book-learn-more{
+        margin-top: 3rem;
+        margin-left: 50vw;
+    }
+
+    #physical-health img {
+        width: 35vw;
+        height: 45vh;
+    }
+    #physical-health-rigth{
+        height: 90%;
+        padding: 1rem;
+    }
+
+    .podcast .head{
+        margin-top: 15rem;
+        margin-bottom: 5rem;
+    }
+    .podcast .head h1{
+        font-size: 4rem;
+        padding: 2rem 0;
+    }
+    .podcast .head p{
+        font-size: 1.5rem;
+    }
+
+    .podcast .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .podcast .item .left {
+        flex:1 1 40rem; 
+        height: 2vh;
+    }
+    .podcast .item .left h3{
+        font-size: 1.5rem;
+    }
+    .podcast .item .middle {
+        width: 30vw; 
+        align-content: center;
+        margin-right: 20vw;
+    }
+
+    .podcast .item .left h3:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+     
+    .footer {
+        font-family: Arial, sans-serif; 
+        width: 100%;
+    }
+    .footer .upper {
+        margin-top: 3rem;
+        margin-bottom: 20vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 1rem;
+    }
+    .footer .upper .left {
+        flex:1 1 40rem; 
+        height: 2vh;
+        margin-left: 10vw;
+    }
+    .footer .upper .left h1 {
+        font-size: 4rem;
+    }
+
+    .footer .upper .rigth {
+        flex:1 1 40rem; 
+        height: 2vh;
+        padding-right: 10vw;
+    
+    }
+    .footer .upper .rigth h3:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    .footer .footer-content {
+        background-color: #0E0E0E; /* Dark background color for the entire footer content */
+        width: 100%; /* Full width */
+        padding-bottom: 3rem; /* Bottom padding for spacing */
+    }
+    
+    /* Lower Section Styling */
+    .footer .lower {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3rem;
+        max-width: 1200px; /* Content width constraint */
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        background-color: transparent; /* No background color for this section, it's inheriting from the footer-content */
+        border-top: 2px solid #f8f8f8; /* Light border to separate the lower section */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    }
+    
+    /* Footer Section Styling */
+    .footer-section {
+        flex: 1;
+        padding: 0 1rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #f8f8f8; /* Lighter text color for the section titles */
+    }
+    
+    .footer-section a {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .footer-section a:hover {
+        color: #f8f8f8; /* Lighter hover color */
+    }
+    
+    /* Socials Section */
+    .socials {
+        width: 100%; /* Full width for the socials section */
+        padding: 2rem 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    }
+    
+    .socials .cpr {
+        font-size: 1rem;
+        color: #ccc;
+    }
+    
+    .socials .logo img {
+        width: 180px; /* Increased the size of the logo */
+    }
+    
+    .socials .icon {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .socials .icon i {
+        font-size: 1.8rem; /* Slightly larger icons */
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .socials .icon i:hover {
+        color: #f8f8f8; /* Icon color change on hover */
+    }
+    
+    /* Footer Links Styling */
+    .footer-section a {
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .footer-section a:hover {
+        color: #f8f8f8;
+        border-bottom: 2px solid #f8f8f8;
+    }
